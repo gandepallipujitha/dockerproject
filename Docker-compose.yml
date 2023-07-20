@@ -1,1 +1,29 @@
+version: '2'
+services:
+  train:
+    image:  gandepallipujitha/trainrepo:latest
+    ports:
+      - "90:80"
+    deploy:
+      replicas: 3
 
+  movie:
+    image: gandepallipujitha/movierepo:latest 
+    ports:
+      - "91:80"
+    deploy:
+      replicas: 3
+
+  dth:
+    image:  gandepallipujitha/dthrepo:latest
+    ports:
+      - "92:80"
+    deploy:
+      replicas: 3
+
+  recharge:
+    image: gandepallipujitha/rechargerepo:latest
+    ports:
+      - "93:80"
+    deploy:
+      replicas: 3
